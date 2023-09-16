@@ -8,8 +8,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class FeedbackServiceImp implements FeedbackService {
 
-    @Autowired
-    private FeedbackRepository feedbackRepository;
+    private final FeedbackRepository feedbackRepository;
+
+    public FeedbackServiceImp(FeedbackRepository feedbackRepository) {
+        this.feedbackRepository = feedbackRepository;
+    }
 
     @Override
     public Feedback getFeedback(int id) {

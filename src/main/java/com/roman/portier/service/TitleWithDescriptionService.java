@@ -1,5 +1,7 @@
 package com.roman.portier.service;
 
+import com.roman.portier.entity.TitleWithDescription;
+
 public interface TitleWithDescriptionService {
-    public Object getTitleWithDescription(int id);
+    TitleWithDescription getTitleWithDescription(int id);
 }

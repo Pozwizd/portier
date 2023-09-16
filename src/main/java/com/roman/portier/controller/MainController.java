@@ -3,35 +3,40 @@ package com.roman.portier.controller;
 
 import com.roman.portier.entity.*;
 import com.roman.portier.service.*;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/")
 public class MainController {
 
-    @Autowired
-    private TitleWithDescriptionService titleWithDescriptionService;
+    private final TitleWithDescriptionService titleWithDescriptionService;
+    private final SkillService skillService;
+    private final WorkCardService workCardService;
+    private final ArticleService articleService;
+    private final FeedbackService feedbackService;
 
-    @Autowired
-    private SkillService skillService;
-
-    @Autowired
-    private WorkCardService workCardService;
-
-    @Autowired
-    private ArticleService articleService;
-
-    @Autowired
-    private FeedbackService feedbackService;
+    public MainController(TitleWithDescriptionService titleWithDescriptionService, SkillService skillService, WorkCardService workCardService, ArticleService articleService, FeedbackService feedbackService) {
+        this.titleWithDescriptionService = titleWithDescriptionService;
+        this.skillService = skillService;
+        this.workCardService = workCardService;
+        this.articleService = articleService;
+        this.feedbackService = feedbackService;
+    }
 
 
-    @RequestMapping("/")
+    @GetMapping("index")
+    @RequestMapping
     public String index(Model model) {
 
-        TitleWithDescription titleDesc = (TitleWithDescription) titleWithDescriptionService.getTitleWithDescription(1);
+        TitleWithDescription titleDesc = titleWithDescriptionService
+                .getTitleWithDescription(1);
         model.addAttribute("titleDesc", titleDesc);
+        TitleWithDescription titleDesc2 = titleWithDescriptionService
+                .getTitleWithDescription(2);
+        model.addAttribute("titleDesc2", titleDesc2);
 
         Skill skill = skillService.getSkill(1);
         Skill skill2 = skillService.getSkill(2);
@@ -51,12 +56,14 @@ public class MainController {
         model.addAttribute("article", article);
 
         Feedback feedback = feedbackService.getFeedback(1);
+        Feedback feedback2 = feedbackService.getFeedback(2);
+        Feedback feedback3 = feedbackService.getFeedback(3);
         model.addAttribute("feedback", feedback);
 
         return "index";
     }
 
-    @RequestMapping("/portfolio")
+    @GetMapping("portfolio")
     public String portfolio(Model model) {
         return "portfolio";
     }

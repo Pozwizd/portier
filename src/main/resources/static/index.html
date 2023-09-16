@@ -230,8 +230,8 @@
         <div class="container">
             <div class="users__inner">
                 <div class="users__inner--info">
-                    <div class="users__inner--title">What people say about me</div>
-                    <div class="users__inner--subtitle">
+                    <div class="users__inner--title" th:text="${titleDesc2.title}">What people say about me</div>
+                    <div class="users__inner--subtitle" th:text="${titleDesc2.description}">
                         These steps are: Deep Observation (The Passive Mode), Skills
                         Acquisition (The Practice Mode), and Experimentation (The Active
                         Mode).
@@ -250,14 +250,14 @@
                             />
                         </div>
                         <div class="users__column">
-                            <div class="users__box--text">
+                            <div class="users__box--text" th:text="${feedback.text}">
                                 “In fact, whenever you must learn a new skill or alter your
                                 career path later in life, you reconnect with that youthful,
                                 adventurous part of yourself.”
                             </div>
                             <div class="users__box--desc">
-                                <div class="box__desc--name">Domingo Menenses</div>
-                                <div class="box__desc--position">Cobrand - CEO</div>
+                                <div class="box__desc--name" th:text="${feedback.author}">Domingo Menenses</div>
+                                <div class="box__desc--position" th:text="${feedback.position}">Cobrand - CEO</div>
                             </div>
                         </div>
                     </div>
@@ -270,14 +270,14 @@
                             />
                         </div>
                         <div class="users__column">
-                            <div class="users__box--text">
+                            <div class="users__box--text" th:text="${feedback2.text}">
                                 “In fact, whenever you must learn a new skill or alter your
                                 career path later in life, you reconnect with that youthful,
                                 adventurous part of yourself.”
                             </div>
                             <div class="users__box--desc">
-                                <div class="box__desc--name">Karla Benivez</div>
-                                <div class="box__desc--position">Tinnie - CO-Founder</div>
+                                <div class="box__desc--name" th:text="${feedback2.author}">Karla Benivez</div>
+                                <div class="box__desc--position" th:text="${feedback2.position}">Tinnie - CO-Founder</div>
                             </div>
                         </div>
                     </div>
@@ -290,14 +290,14 @@
                             />
                         </div>
                         <div class="users__column">
-                            <div class="users__box--text">
+                            <div class="users__box--text" th:text="${feedback3.text}">
                                 “In fact, whenever you must learn a new skill or alter your
                                 career path later in life, you reconnect with that youthful,
                                 adventurous part of yourself.”
                             </div>
                             <div class="users__box--desc">
-                                <div class="box__desc--name">Mark Clark</div>
-                                <div class="box__desc--position">Airbnb - Lead Designer</div>
+                                <div class="box__desc--name" th:text="${feedback3.author}">Mark Clark</div>
+                                <div class="box__desc--position" th:text="${feedback3.position}">Airbnb - Lead Designer</div>
                             </div>
                         </div>
                     </div>
