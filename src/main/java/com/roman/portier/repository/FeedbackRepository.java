@@ -1,4 +1,4 @@
-package com.roman.portier.dao;
+package com.roman.portier.repository;
 
 import com.roman.portier.entity.Feedback;
 import org.springframework.data.jpa.repository.JpaRepository;

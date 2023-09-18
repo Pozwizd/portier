@@ -1,8 +1,8 @@
-package com.roman.portier.service;
+package com.roman.portier.service.imp;
 
-import com.roman.portier.dao.FeedbackRepository;
+import com.roman.portier.repository.FeedbackRepository;
 import com.roman.portier.entity.Feedback;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.roman.portier.service.FeedbackService;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -1,11 +1,10 @@
-package com.roman.portier.service;
+package com.roman.portier.service.imp;
 
-import com.roman.portier.dao.SkillRepository;
+import com.roman.portier.repository.SkillRepository;
 import com.roman.portier.entity.Skill;
+import com.roman.portier.service.SkillService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class SkillServiceImp implements SkillService {

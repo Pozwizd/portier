@@ -1,7 +1,8 @@
-package com.roman.portier.service;
+package com.roman.portier.service.imp;
 
-import com.roman.portier.dao.TitleWithDescriptionRepository;
+import com.roman.portier.repository.TitleWithDescriptionRepository;
 import com.roman.portier.entity.TitleWithDescription;
+import com.roman.portier.service.TitleWithDescriptionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

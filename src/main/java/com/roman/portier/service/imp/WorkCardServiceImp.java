@@ -1,11 +1,10 @@
-package com.roman.portier.service;
+package com.roman.portier.service.imp;
 
-import com.roman.portier.dao.WorkCardRepository;
+import com.roman.portier.repository.WorkCardRepository;
 import com.roman.portier.entity.WorkCard;
+import com.roman.portier.service.WorkCardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class WorkCardServiceImp implements WorkCardService {
