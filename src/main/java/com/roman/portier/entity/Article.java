@@ -21,21 +21,26 @@ public class Article {
     @Column(name = "url")
     private String url;
 
+    @Column(name = "url2")
+    private String url2;
+
     public Article() {
 
     }
 
-    public Article(String title, String description, String url) {
-        this.title = title;
-        this.description = description;
-        this.url = url;
-    }
-
-    public Article(int id, String title, String description, String url) {
+    public Article(int id, String title, String description, String url, String url2) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.url = url;
+        this.url2 = url2;
+    }
+
+    public Article(String title, String description, String url, String url2) {
+        this.title = title;
+        this.description = description;
+        this.url = url;
+        this.url2 = url2;
     }
 
     public int getId() {
@@ -70,6 +75,14 @@ public class Article {
         this.url = url;
     }
 
+    public String getUrl2() {
+        return url2;
+    }
+
+    public void setUrl2(String url2) {
+        this.url2 = url2;
+    }
+
     @Override
     public String toString() {
         return "Article{" +
@@ -77,6 +90,7 @@ public class Article {
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", url='" + url + '\'' +
+                ", url2='" + url2 + '\'' +
                 '}';
     }
 }

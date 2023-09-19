@@ -9,7 +9,9 @@ create table if not exists title_with_description
 );
 
 insert into title_with_description (Title, Description)
-values ('Digital Product Designer.',
+values (
+#         index
+        'Digital Product Designer.',
         'I am Portier, experienced Digital Product Designer based on Florida. I am here to help you build your amazing product.'),
 
        ('What people say about me',
@@ -27,7 +29,13 @@ values ('Digital Product Designer.',
        ('How about we make something awesome together?',
         'If we keep practicing, we gain fluency; basic skills are mastered, allowing us to take on newer and more exciting challenges'),
 
-# ----
+#      Portfolio
+
+       ('I love <span>what I do</span> and I make sure I do great.',
+        'I am Portier, experienced Digital Product Designer based on Florida. I
+          am here to help you build your amazing product.'),
+
+#     about
 
        ('I am Portier UI-UX Designer based in Florida.',
         'Become who you are by learning who you are.'),
@@ -35,8 +43,6 @@ values ('Digital Product Designer.',
        ('What makes me who I am.',
         '“If you work on yourself first, as Faraday did, developing a solid work ethic and organizational skills, eventually the right teacher will appear in your life.'),
 
-       ('Companies I have worked with.',
-        'This means that you move toward challenges that will toughen and improve you, where you will get the most objective feedback on your performance and progress. You do not choose apprenticeships that seem easy and comfortable'),
 
        ('50+',
         'The game you want to play is different: to instead find a niche in
@@ -52,23 +58,10 @@ values ('Digital Product Designer.',
 
        ('Companies I have worked with.',
         'This means that you move toward challenges that will toughen and
-            improve you, where you will get the most objective feedback on your
-            performance and progress. You do not choose apprenticeships that
-            seem easy and comfortable'),
+        improve you, where you will get the most objective feedback on your
+        performance and progress.
+        You do not choose apprenticeships that seem easy and comfortable'),
 
-       ('How about we make something awesome together?',
-        'If we keep practicing, we gain fluency; basic skills are mastered,
-            allowing us to take on newer and more exciting challenges.'),
-
-
-#     ---
-
-       ('I love <span>what I do</span> and I make sure I do great.',
-        'I am Portier, experienced Digital Product Designer based on Florida. I
-          am here to help you build your amazing product.'),
-
-
-#     ---
 
        ('Find tips about the best design practices',
         'Everything in nature has a structure, a way that the parts relate to one another, which is generally fluid and not so easy to conceptualize.'),
@@ -89,56 +82,74 @@ values ('UI-UX Designer', 'The time that leads to mastery is dependent on the in
        ('Product Design', 'The time that leads to mastery is dependent on the intensity of our focus.'),
        ('Writing', 'The time that leads to mastery is dependent on the intensity of our focus.');
 
-create table if not exists WorkCard
+create table if not exists work_card
 (
     id   int primary key auto_increment,
     name varchar(255),
-    url  varchar(255)
+    url  varchar(255),
+    url2 varchar(255),
+    url3 varchar(255)
+
 );
 
-insert into WorkCard (name, url)
-values ('image3', 'images/dist/img Home Portfolio/Work Card (3).webp'),
-       ('image4', 'images/dist/img Home Portfolio/Work Card (4).webp'),
-       ('image5', 'images/dist/img Home Portfolio/Work Card (5).webp');
+insert into work_card (name, url, url2, url3)
+values ('workCard1', 'images/dist/img Home Portfolio/Work Card.webp',
+        'images/dist/img Home Portfolio/Work Card (3).webp',
+        'images/dist/img Home Portfolio/Work Card (6).webp'),
+
+       ('workCard2', 'images/dist/img Home Portfolio/Work Card (1).webp',
+        'images/dist/img Home Portfolio/Work Card (4).webp',
+        'images/dist/img Home Portfolio/Work Card (7).webp'),
+
+       ('workCard3', 'images/dist/img Home Portfolio/Work Card (2).webp',
+        'images/dist/img Home Portfolio/Work Card (5).webp',
+        'images/dist/img Home Portfolio/Work Card (8).webp');
 
 create table if not exists Article
 (
     id          int primary key auto_increment,
     title       varchar(255),
     description text,
-    url         varchar(255)
+    url  varchar(255),
+    url2 varchar(255)
 );
 
-insert into Article (title, description, url)
+insert into Article (title, description, url, url2)
 values ('I build products for companies & startups.',
         'Everything in nature has a structure, a way that the parts relate to one another, which is generally fluid and not so easy to conceptualize.',
-        'images/dist/img Home Portfolio/Rectangle 4.webp'),
+        'images/dist/img Home Portfolio/Rectangle 4.webp',
+        'images/dist/img Home Portfolio/Rectangle 4 (2).webp'),
 
        ('My main goal is too keep my customers satisfied.',
         'Even with skills that are primarily mental, such as computer programming or speaking a foreign language. it remains the case that we learn best through practice and repetition—the natural learning process.',
-        'images/dist/img Home Portfolio/Rectangle 4 (1).webp'),
+        'images/dist/img Home Portfolio/Rectangle 4 (1).webp',
+        'images/dist/img Home Portfolio/Rectangle 4 (3).webp'),
 
        ('Free fonts alternatives: The ultimate guide',
         'You must engrave deeply in your mind and never forget: your emotional commitment to what you are doing will be translated into your work.',
-        'images/dist/img Blog About me/Rectangle 1 (3).webp'),
+        'images/dist/img Blog About me/Rectangle 1 (3).webp',
+        'images/dist/img Blog About me/Rectangle 1 (11).webp'),
 
        ('How to design an app from stratch',
         'You must engrave deeply in your mind and never forget: your
               emotional commitment to what you are doing will be translated into
               your work.',
-        'images/dist/img Blog About me/Rectangle 1.webp'),
+        'images/dist/img Blog About me/Rectangle 1.webp',
+        'images/dist/img Blog About me/Rectangle 1 (7).webp'),
 
        ('100 things a UI-UX Designer should know',
         'You must engrave deeply in your mind and never forget: your
               emotional commitment to what you are doing will be translated into
               your work.',
-        'images/dist/img Blog About me/Rectangle 1 (1).webp'),
+        'images/dist/img Blog About me/Rectangle 1 (1).webp',
+        'images/dist/img Blog About me/Rectangle 1 (8).webp'),
 
        ('4 rules for intuitive UX',
         'You must engrave deeply in your mind and never forget: your
               emotional commitment to what you are doing will be translated into
               your work.',
-        'images/dist/img Blog About me/Rectangle 1 (2).webp');
+        'images/dist/img Blog About me/Rectangle 1 (2).webp',
+        'images/dist/img Blog About me/Rectangle 1 (9).webp');
 
 create table if not exists feedback
 (
@@ -159,6 +170,7 @@ values ('“In fact, whenever you must learn a new skill or alter your career pa
         'Karla Benivez',
         'Tinnie - CO-Founder',
         'images/dist/img Home Portfolio/Avatar.webp'),
+
        ('“In fact, whenever you must learn a new skill or alter your career path later in life, you reconnect with that youthful, adventurous part of yourself.”',
         'Mark Clark',
         'Airbnb - Lead Designer',

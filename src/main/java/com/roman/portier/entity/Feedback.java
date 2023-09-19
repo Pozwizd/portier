@@ -20,20 +20,27 @@ public class Feedback {
     @Column(name = "position")
     private String position;
 
+
+    @Column(name = "url")
+    private String url;
+
     public Feedback() {
+
     }
 
-    public Feedback(int id, String text, String author, String position) {
+    public Feedback(String text, String author, String position, String url) {
+        this.text = text;
+        this.author = author;
+        this.position = position;
+        this.url = url;
+    }
+
+    public Feedback(int id, String text, String author, String position, String url) {
         this.id = id;
         this.text = text;
         this.author = author;
         this.position = position;
-    }
-
-    public Feedback(String text, String author, String position) {
-        this.text = text;
-        this.author = author;
-        this.position = position;
+        this.url = url;
     }
 
     public int getId() {
@@ -66,5 +73,24 @@ public class Feedback {
 
     public void setPosition(String position) {
         this.position = position;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    @Override
+    public String toString() {
+        return "Feedback{" +
+                "id=" + id +
+                ", text='" + text + '\'' +
+                ", author='" + author + '\'' +
+                ", position='" + position + '\'' +
+                ", url='" + url + '\'' +
+                '}';
     }
 }
