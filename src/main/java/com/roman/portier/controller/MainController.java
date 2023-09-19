@@ -27,8 +27,8 @@ public class MainController {
     }
 
 
-    @GetMapping("index")
-    @RequestMapping
+
+    @RequestMapping("index")
     public String index(Model model) {
 
         TitleWithDescription titleDesc = titleWithDescriptionService

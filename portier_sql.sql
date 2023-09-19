@@ -1,14 +1,14 @@
 create database if not exists portier_db;
 use portier_db;
 
-create table if not exists TitleWithDescription
+create table if not exists title_with_description
 (
     Id          int primary key auto_increment,
     Title       varchar(255),
     Description text
 );
 
-insert into TitleWithDescription (Title, Description)
+insert into title_with_description (Title, Description)
 values ('Digital Product Designer.',
         'I am Portier, experienced Digital Product Designer based on Florida. I am here to help you build your amazing product.'),
 

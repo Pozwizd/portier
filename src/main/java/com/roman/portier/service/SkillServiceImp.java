@@ -1,4 +1,4 @@
-package com.roman.portier.service.imp;
+package com.roman.portier.service;
 
 import com.roman.portier.entity.Skill;
 import com.roman.portier.repository.SkillRepository;
