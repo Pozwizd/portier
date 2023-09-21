@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class MainController {
+public class indexPageController {
 
     private final TitleWithDescriptionService titleWithDescriptionService;
 
@@ -20,7 +20,7 @@ public class MainController {
 
     private final FeedbackService feedbackService;
 
-    public MainController(TitleWithDescriptionService titleWithDescriptionService, SkillService skillService, WorkCardService workCardService, ArticleService articleService, FeedbackService feedbackService) {
+    public indexPageController(TitleWithDescriptionService titleWithDescriptionService, SkillService skillService, WorkCardService workCardService, ArticleService articleService, FeedbackService feedbackService) {
         this.titleWithDescriptionService = titleWithDescriptionService;
         this.skillService = skillService;
         this.workCardService = workCardService;

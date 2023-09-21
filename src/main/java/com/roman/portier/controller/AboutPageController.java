@@ -6,7 +6,7 @@ import com.roman.portier.entity.TitleWithDescription;
 import com.roman.portier.service.*;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-public class AboutMePageController {
+public class AboutPageController {
 
     private final TitleWithDescriptionService titleWithDescriptionService;
 
@@ -14,13 +14,13 @@ public class AboutMePageController {
 
     private final ExperienceService experienceService;
 
-    public AboutMePageController(TitleWithDescriptionService titleWithDescriptionService, QualityService qualityService, ExperienceService experienceService) {
+    public AboutPageController(TitleWithDescriptionService titleWithDescriptionService, QualityService qualityService, ExperienceService experienceService) {
         this.titleWithDescriptionService = titleWithDescriptionService;
         this.qualityService = qualityService;
         this.experienceService = experienceService;
     }
 
-    @RequestMapping("/about")
+    @RequestMapping("/about.html")
     public String aboutMe(Model model) {
 
         TitleWithDescription titleDesc8 = titleWithDescriptionService.getTitleWithDescription(8);

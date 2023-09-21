@@ -10,7 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class portfolioController {
+public class portfolioPageController {
 
 
     private final TitleWithDescriptionService titleWithDescriptionService;
@@ -18,7 +18,7 @@ public class portfolioController {
 
     private final WorkCardService workCardService;
 
-    public portfolioController(TitleWithDescriptionService titleWithDescriptionService, WorkCardService workCardService) {
+    public portfolioPageController(TitleWithDescriptionService titleWithDescriptionService, WorkCardService workCardService) {
         this.titleWithDescriptionService = titleWithDescriptionService;
         this.workCardService = workCardService;
     }

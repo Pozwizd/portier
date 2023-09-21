@@ -9,19 +9,19 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class blogController {
+public class blogPageController {
 
     private final TitleWithDescriptionService titleWithDescriptionService;
 
     private final ArticleService articleService;
 
 
-    public blogController(TitleWithDescriptionService titleWithDescriptionService, ArticleService articleService) {
+    public blogPageController(TitleWithDescriptionService titleWithDescriptionService, ArticleService articleService) {
         this.titleWithDescriptionService = titleWithDescriptionService;
         this.articleService = articleService;
     }
 
-    @RequestMapping("/blog")
+    @RequestMapping("/blog.html")
     public String blog(Model model) {
 
         TitleWithDescription titleDesc14 = titleWithDescriptionService.getTitleWithDescription(14);
