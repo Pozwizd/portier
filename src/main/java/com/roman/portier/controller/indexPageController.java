@@ -53,8 +53,8 @@ public class indexPageController {
         Article article = articleService.getArticle(1);
         model.addAttribute("article", article);
 
-        TitleWithDescription titleDesc2 = titleWithDescriptionService.getTitleWithDescription(2);
-        model.addAttribute("titleDesc2", titleDesc2);
+        Article article2 = articleService.getArticle(2);
+        model.addAttribute("article2", article2);
 
         Feedback feedback = feedbackService.getFeedback(1);
         Feedback feedback2 = feedbackService.getFeedback(2);
@@ -64,21 +64,9 @@ public class indexPageController {
         model.addAttribute("feedback2", feedback2);
         model.addAttribute("feedback3", feedback3);
 
-        TitleWithDescription titleDesc3 = titleWithDescriptionService.getTitleWithDescription(3);
-        model.addAttribute("titleDesc3", titleDesc3);
-
-        TitleWithDescription titleDesc4 = titleWithDescriptionService.getTitleWithDescription(4);
-        model.addAttribute("titleDesc4", titleDesc4);
-
-        TitleWithDescription titleDesc5 = titleWithDescriptionService.getTitleWithDescription(5);
-        model.addAttribute("titleDesc5", titleDesc5);
-
-        Article article2 = articleService.getArticle(2);
-        model.addAttribute("article2", article2);
-
-        TitleWithDescription titleDesc6 = titleWithDescriptionService.getTitleWithDescription(6);
-        model.addAttribute("titleDesc6", titleDesc6);
-
+        for (int i = 2; i <= 6; i++) {
+            model.addAttribute("titleDesc" + i, titleWithDescriptionService.getTitleWithDescription(i));
+        }
 
         return "index";
     }

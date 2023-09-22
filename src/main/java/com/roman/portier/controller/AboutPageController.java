@@ -4,8 +4,11 @@ import com.roman.portier.entity.Experience;
 import com.roman.portier.entity.Quality;
 import com.roman.portier.entity.TitleWithDescription;
 import com.roman.portier.service.*;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
 public class AboutPageController {
 
     private final TitleWithDescriptionService titleWithDescriptionService;
@@ -23,10 +26,7 @@ public class AboutPageController {
     @RequestMapping("/about.html")
     public String aboutMe(Model model) {
 
-        TitleWithDescription titleDesc8 = titleWithDescriptionService.getTitleWithDescription(8);
-        model.addAttribute("titleDesc8", titleDesc8);
-        TitleWithDescription titleDesc9 = titleWithDescriptionService.getTitleWithDescription(9);
-        model.addAttribute("titleDesc9", titleDesc9);
+
 
         Quality  quality = qualityService.getQuality(1);
         Quality  quality2 = qualityService.getQuality(2);
@@ -42,17 +42,10 @@ public class AboutPageController {
         model.addAttribute("quality5", quality5);
         model.addAttribute("quality6", quality6);
 
-        TitleWithDescription titleDesc10 = titleWithDescriptionService.getTitleWithDescription(9);
-        model.addAttribute("titleDesc10", titleDesc10);
+        for (int i = 8; i <= 13; i++) {
+            model.addAttribute("titleDesc" + i, titleWithDescriptionService.getTitleWithDescription(i));
+        }
 
-        TitleWithDescription titleDesc11 = titleWithDescriptionService.getTitleWithDescription(9);
-        model.addAttribute("titleDesc11", titleDesc11);
-
-        TitleWithDescription titleDesc12 = titleWithDescriptionService.getTitleWithDescription(9);
-        model.addAttribute("titleDesc12", titleDesc12);
-
-        TitleWithDescription titleDesc13 = titleWithDescriptionService.getTitleWithDescription(9);
-        model.addAttribute("titleDesc13", titleDesc13);
 
         Experience experience = experienceService.getExperience(1);
         Experience experience2 = experienceService.getExperience(2);
