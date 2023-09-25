@@ -5,7 +5,7 @@ import com.roman.portier.entity.*;
 import com.roman.portier.service.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class indexPageController {
@@ -29,7 +29,7 @@ public class indexPageController {
     }
 
 
-    @RequestMapping("/")
+    @RequestMapping(value = "/")
     public String index(Model model) {
 
         TitleWithDescription titleDesc = titleWithDescriptionService.getTitleWithDescription(1);

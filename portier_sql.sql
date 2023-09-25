@@ -70,14 +70,14 @@ values (
         'Repeated failure will toughen your spirit and show you with absolute clarity how things must be done.');
 
 
-create table if not exists Skill
+create table if not exists skill
 (
     id          int primary key auto_increment,
     title       varchar(255),
     description text
 );
 
-insert into Skill (title, description)
+insert into skill (title, description)
 values ('UI-UX Designer', 'The time that leads to mastery is dependent on the intensity of our focus.'),
        ('Product Design', 'The time that leads to mastery is dependent on the intensity of our focus.'),
        ('Writing', 'The time that leads to mastery is dependent on the intensity of our focus.');
@@ -93,11 +93,11 @@ create table if not exists work_card
 );
 
 insert into work_card (name, url, url2, url3)
-values ('workCard1', 'images/dist/img Home Portfolio/Work Card.webp',
+values ('workCard1', 'images/dist/img Home Portfolio/WorkCa5rd.webp',
         'images/dist/img Home Portfolio/Work Card (3).webp',
         'images/dist/img Home Portfolio/Work Card (6).webp'),
 
-       ('workCard2', 'images/dist/img Home Portfolio/Work Card (1).webp',
+       ('workCard2', 'images/dist/img Home Portfolio/WorkCard(1).webp',
         'images/dist/img Home Portfolio/Work Card (4).webp',
         'images/dist/img Home Portfolio/Work Card (7).webp'),
 
@@ -105,7 +105,7 @@ values ('workCard1', 'images/dist/img Home Portfolio/Work Card.webp',
         'images/dist/img Home Portfolio/Work Card (5).webp',
         'images/dist/img Home Portfolio/Work Card (8).webp');
 
-create table if not exists Article
+create table if not exists article
 (
     id          int primary key auto_increment,
     title       varchar(255),
@@ -114,7 +114,7 @@ create table if not exists Article
     url2 varchar(255)
 );
 
-insert into Article (title, description, url, url2)
+insert into article (title, description, url, url2)
 values ('I build products for companies & startups.',
         'Everything in nature has a structure, a way that the parts relate to one another, which is generally fluid and not so easy to conceptualize.',
         'images/dist/img Home Portfolio/Rectangle 4.webp',
@@ -176,14 +176,14 @@ values ('“In fact, whenever you must learn a new skill or alter your career pa
         'Airbnb - Lead Designer',
         'images/dist/img Home Portfolio/Avatar (1).webp');
 
-create table if not exists Quality
+create table if not exists quality
 (
     id       int primary key auto_increment,
     title    varchar(255),
     description text
 );
 
-insert into Quality (title, description)
+insert into quality (title, description)
 values ('Passionate',
         'As Pasteur himself commented, “Chance favors only the prepared
               mind.'),
@@ -208,7 +208,7 @@ values ('Passionate',
         'As Pasteur himself commented, “Chance favors only the prepared
               mind.');
 
-create table if not exists Experience
+create table if not exists experience
 (
     id       int primary key auto_increment,
     name    varchar(255),
@@ -216,7 +216,7 @@ create table if not exists Experience
 );
 
 
-insert into Experience (name, description)
+insert into experience (name, description)
 values ('Modulz',
         'Lead Designer'),
        ('Stitches',
