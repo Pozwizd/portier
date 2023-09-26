@@ -43,10 +43,11 @@ public class indexPageController {
         model.addAttribute("skill3", skill3);
 
         WorkCard workCard = workCardService.getWorkCard(1);
+        model.addAttribute("workCard", workCard);
         WorkCard workCard1 = workCardService.getWorkCard(2);
         WorkCard workCard2 = workCardService.getWorkCard(3);
 
-        model.addAttribute("workCard", workCard);
+
         model.addAttribute("workCard1", workCard1);
         model.addAttribute("workCard2", workCard2);
 

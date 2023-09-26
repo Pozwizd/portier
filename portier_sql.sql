@@ -93,7 +93,7 @@ create table if not exists work_card
 );
 
 insert into work_card (name, url, url2, url3)
-values ('workCard1', 'images/dist/img Home Portfolio/Work Card.webp',
+values ('workCard1', 'images/dist/img Home Portfolio/WorkCard.webp',
         'images/dist/img Home Portfolio/Work Card (3).webp',
         'images/dist/img Home Portfolio/Work Card (6).webp'),
 
